@@ -1,122 +1,104 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import heroImg from "./assets/hero.png";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div class="bg-white w-full max-w-md p-8 rounded-lg shadow-md">
+      <div class="text-center mb-8">
+        <h2 class="text-[#2e8b57] font-bold text-3xl m-0">
+          Smart Meal Planner
+        </h2>
+        <div class="text-gray-500 text-sm mt-2">
+          Masuk untuk mengatur rencana menu mingguan Anda
         </div>
+      </div>
+
+      <form action="#" method="POST" class="space-y-5">
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <label
+            for="email"
+            class="block text-xs font-bold text-[#2e8b57] tracking-wide uppercase mb-1.5"
+          >
+            📧 Alamat Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-base text-gray-900 focus:outline-none focus:border-[#2e8b57] focus:bg-white transition-all duration-200"
+            placeholder="nama@email.com"
+          />
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div>
+          <div class="flex justify-between items-center mb-1.5">
+            <label
+              for="password"
+              class="block text-xs font-bold text-[#2e8b57] tracking-wide uppercase"
+            >
+              🔒 Kata Sandi
+            </label>
+            <a
+              href="#"
+              class="text-xs font-medium text-gray-500 hover:text-[#2e8b57] transition-colors"
+            >
+              Lupa sandi?
+            </a>
+          </div>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-base text-gray-900 focus:outline-none focus:border-[#2e8b57] focus:bg-white transition-all duration-200"
+            placeholder="••••••••"
+          />
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <div class="flex items-center">
+          <input
+            type="checkbox"
+            id="remember"
+            name="remember"
+            class="w-4 h-4 text-[#2e8b57] border-gray-300 rounded focus:ring-[#2e8b57] accent-[#2e8b57]"
+          />
+          <label for="remember" class="ml-2 text-sm text-gray-600 select-none">
+            Ingat akun saya
+          </label>
+        </div>
+
+        <div class="pt-2">
+          <button
+            type="submit"
+            class="w-full py-3 bg-[#2e8b57] text-white font-bold text-base rounded shadow-md shadow-green-700/20 hover:opacity-90 transition-opacity focus:outline-none"
+          >
+            Masuk Sekarang
+          </button>
+        </div>
+      </form>
+
+      <div class="relative flex py-4 items-center my-4">
+        <div class="flex-grow border-t border-gray-200"></div>
+        <span class="flex-shrink mx-4 text-gray-400 text-xs uppercase tracking-wider">
+          Atau
+        </span>
+        <div class="flex-grow border-t border-gray-200"></div>
+      </div>
+
+      <div class="text-center text-sm text-gray-600">
+        Belum punya akun?
+        <a href="#" class="font-bold text-[#2e8b57] hover:underline ml-1">
+          Daftar di sini
+        </a>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
