@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 
 const Login = () => {
-  // State untuk menyimpan data input form
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
-  // Fungsi untuk menangani submit form login
+  // submit fungsi
   const handleLogin = (event) => {
     event.preventDefault();
     
-    // Tempatkan logika autentikasi atau API login kamu di sini
+    // konvertan logika log in dari script json html
     console.log('Memproses Login...', { email, password, rememberMe });
   };
 
   return (
     <div className="bg-white w-full max-w-md p-8 rounded-lg shadow-md transition-all duration-300">
-      {/* Header Judul */}
+      
       <div className="text-center mb-8">
         <h2 className="text-[#2e8b57] font-bold text-3xl m-0">
           Smart Meal Planner
@@ -26,9 +26,9 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Form Login */}
+      
       <form onSubmit={handleLogin} className="space-y-5">
-        {/* Input Email */}
+        
         <div>
           <label
             htmlFor="login-email"
@@ -47,7 +47,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Input Password */}
+        
         <div>
           <div className="flex justify-between items-center mb-1.5">
             <label
@@ -74,7 +74,7 @@ const Login = () => {
           />
         </div>
 
-        {/* Checkbox Remember Me */}
+        
         <div className="flex items-center">
           <input
             type="checkbox"
@@ -88,7 +88,7 @@ const Login = () => {
           </label>
         </div>
 
-        {/* Tombol Submit */}
+        
         <div className="pt-2">
           <button
             type="submit"
@@ -99,7 +99,7 @@ const Login = () => {
         </div>
       </form>
 
-      {/* Pembatas / Divider */}
+    
       <div className="relative flex py-4 items-center my-4">
         <div className="flex-grow border-t border-gray-200"></div>
         <span className="flex-shrink mx-4 text-gray-400 text-xs uppercase tracking-wider">
@@ -108,7 +108,7 @@ const Login = () => {
         <div className="flex-grow border-t border-gray-200"></div>
       </div>
 
-      {/* Navigasi Ke Sign Up */}
+      
       <div className="text-center text-sm text-gray-600">
         Belum punya akun?
         <a
