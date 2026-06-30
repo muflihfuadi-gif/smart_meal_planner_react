@@ -1,7 +1,8 @@
 import React from "react";
 import WEEKLY_MENU from "./data/menu";
+import { Link } from "react-router"; 
 
-function Step2({ onBack, onNext }) {
+function Step2() {
   return (
     <div
       id="step-2"
@@ -40,25 +41,25 @@ function Step2({ onBack, onNext }) {
                     </p>
                     <div className="grid grid-cols-2 gap-2 bg-gray-50 p-3 rounded border border-gray-100 mt-2">
                       <div className="text-xs text-gray-600">
-                        🍞 Karbo:{" "}
+                        碳 Karbo:{" "}
                         <span className="font-medium text-gray-800">
                           {meal.nutrition.karbo}
                         </span>
                       </div>
                       <div className="text-xs text-gray-600">
-                        🍗 Protein:{" "}
+                        脫 Protein:{" "}
                         <span className="font-medium text-gray-800">
                           {meal.nutrition.protein}
                         </span>
                       </div>
                       <div className="text-xs text-gray-600">
-                        🥑 Lemak:{" "}
+                        脫 Lemak:{" "}
                         <span className="font-medium text-gray-800">
                           {meal.nutrition.lemak}
                         </span>
                       </div>
                       <div className="text-xs text-gray-600">
-                        🥕 Mikronutrien:{" "}
+                        脫 Mikronutrien:{" "}
                         <span className="font-medium text-gray-800">
                           {meal.nutrition.mikro}
                         </span>
@@ -73,16 +74,15 @@ function Step2({ onBack, onNext }) {
       </div>
 
       <div className="flex justify-between items-center mt-8">
-        <button
-          type="button"
-          onClick={onBack}
-          className="px-5 py-2.5 bg-gray-200 text-gray-700 font-medium text-sm rounded hover:opacity-80 transition-opacity cursor-pointer"
+        <Link
+          to="/step-1"
+          className="px-5 py-2.5 bg-gray-200 text-gray-700 font-medium text-sm rounded hover:opacity-80 transition-opacity text-center cursor-pointer"
         >
           Kembali
-        </button>
+        </Link>
+        
         <button
           type="button"
-          onClick={onNext}
           className="px-5 py-2.5 bg-[#2e8b57] text-white font-bold text-sm rounded shadow-md shadow-green-700/20 hover:opacity-90 transition-opacity cursor-pointer"
         >
           Lanjut ke Step 3
