@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import Step3NutrisiBudget from './Step3NutrisiBudget';
+import Step3NutrisiBudget from '../components/Step3NutrisiBudget';
 
 export default function Step3() {
   const navigate = useNavigate();
