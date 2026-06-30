@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 const Login = () => {
   
@@ -6,12 +7,17 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
+  const navigate = useNavigate();
+
   // submit fungsi
   const handleLogin = (event) => {
     event.preventDefault();
+  
+    const namaUser = email.split('@')[0];
     
     // konvertan logika log in dari script json html
     console.log('Memproses Login...', { email, password, rememberMe });
+    navigate('/step-1', { state: { username: namaUser } });
   };
 
   return (
