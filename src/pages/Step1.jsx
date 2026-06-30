@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 const Step1 = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const username = location.state?.username || 'Pengguna';
 
   const [individu, setIndividu] = useState('');
@@ -23,7 +24,7 @@ const Step1 = () => {
       return;
     }
     console.log('Melanjutkan ke Step 2 dengan data:', { individu, budget, modeNutrisi });
-    //fungsi navigate('/step-2') di sini, jangan sampe lupa
+    navigate('/step2', { state: { individu, budget, modeNutrisi, username } });
   };
 
   return (
