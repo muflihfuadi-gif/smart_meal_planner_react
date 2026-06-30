@@ -24,7 +24,7 @@ const Step1 = () => {
       return;
     }
     console.log('Melanjutkan ke Step 2 dengan data:', { individu, budget, modeNutrisi });
-    navigate('/step2', { state: { individu, budget, modeNutrisi, username } });
+    navigate('/step-2', { state: { individu, budget, modeNutrisi, username } });
   };
 
   return (

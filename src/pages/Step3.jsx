@@ -29,4 +29,3 @@ export default function Step3() {
   );
 }
 
-export default Step3;
