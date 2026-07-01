@@ -10,7 +10,7 @@ function LoginForm({
   onSubmit
 }) {
   return (
-    <div className="bg-white w-full max-w-md p-8 rounded-lg shadow-md transition-all duration-300">
+    <div className="bg-white w-full max-w-3xl p-12 rounded-xl shadow-lg transition-all duration-300">
 
       <div className="text-center mb-8">
         <h2 className="text-[#2e8b57] font-bold text-3xl m-0">
