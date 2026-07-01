@@ -5,10 +5,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const getNavLinkClass = ({ isActive }) => {
-
     return isActive 
-      ? "font-bold text-red-500 transition-colors" 
-      : "text-teal-600 hover:text-red-500 transition-colors";
+      ? "font-bold text-red-500 transition-colors text-lg"
+      : "text-teal-600 hover:text-red-500 transition-colors text-lg";
   };
 
   return (
