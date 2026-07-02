@@ -12,8 +12,9 @@ import Tentang from "./pages/Tentang";
 function App() {
   return (
     <BrowserRouter>
-      <Header />  
-      <Routes>
+      <div className="flex flex-col min-h-screen bg-gray-50">
+        <Header />
+        <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/step-1" element={<Step1 />} />
         <Route path="/step-2" element={<Step2 />} /> 
@@ -22,7 +23,8 @@ function App() {
         <Route path="/tentang" element={<Tentang />} />
         
       </Routes>
-      <Footer />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
