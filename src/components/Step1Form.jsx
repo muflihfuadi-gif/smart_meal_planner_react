@@ -11,7 +11,7 @@ function Step1Form({
   onLanjutKeStep2
 }) {
   return (
-    <div className="bg-white w-full max-w-md rounded-lg shadow-md p-8 mt-6 transition-all duration-300">
+    <div className="bg-white w-full max-w-3xl rounded-xl shadow-lg border-2 border-teal-500 p-12 mt-6 transition-all duration-300">
       <h2 className="text-2xl font-bold text-center text-green-700 mb-5">
         Smart Meal Planner
       </h2>

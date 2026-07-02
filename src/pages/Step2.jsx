@@ -30,21 +30,23 @@ function Step2() {
   };
 
   return (
-    <div className="w-full flex items-center justify-center p-4">
+    
+    <div className="w-full flex-grow flex items-center justify-center min-h-[80vh] py-10 px-4">
       
       <div
         id="step-2"
-        className="bg-white w-[85%] md:w-[90%] max-w-6xl p-8 rounded-lg shadow-md mt-7 transition-all duration-300"
+    
+        className="bg-white w-[95%] max-w-none p-10 rounded-xl shadow-lg border-2 border-teal-500 transition-all duration-300"
       >
-        <h2 className="text-[#2e8b57] text-center font-bold text-2xl m-0">
+        <h2 className="text-[#2e8b57] text-center font-bold text-4xl m-0">
           Smart Meal Planner
         </h2>
         
-        <div className="text-center text-gray-500 text-sm mt-1 mb-8">
+        <div className="text-center text-gray-500 text-lg mt-2 mb-10">
           Rencana Menu Mingguan Anda
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {WEEKLY_MENU.map((dayData, index) => 
             dayData ? (
               <DayMenuCollapse 
@@ -57,11 +59,11 @@ function Step2() {
           )}
         </div>
 
-        <div className="flex justify-between items-center mt-10 border-t pt-6">
+        <div className="flex justify-between items-center mt-12 border-t pt-8">
           <button
             type="button"
             onClick={() => navigate('/step-1', { state: location?.state || {} })}
-            className="px-5 py-2.5 bg-gray-200 text-gray-700 font-medium text-sm rounded hover:opacity-80 transition-opacity text-center cursor-pointer"
+            className="px-8 py-3 bg-gray-50 border-2 border-teal-500 text-gray-700 font-bold text-lg rounded-lg hover:opacity-80 transition-opacity text-center cursor-pointer"
           >
             Kembali
           </button>
@@ -69,7 +71,7 @@ function Step2() {
           <button
             type="button"
             onClick={() => navigate('/step-3', { state: location?.state || {} })}
-            className="px-5 py-2.5 bg-[#2e8b57] text-white font-bold text-sm rounded shadow-md shadow-green-700/20 hover:opacity-90 transition-opacity cursor-pointer"
+            className="px-8 py-3 bg-[#2e8b57] text-white font-bold text-lg rounded-lg shadow-md shadow-green-700/20 hover:opacity-90 transition-opacity cursor-pointer border-2 border-[#2e8b57]"
           >
             Lanjut ke Step 3
           </button>

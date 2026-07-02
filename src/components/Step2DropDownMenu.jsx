@@ -2,7 +2,7 @@ import React from "react";
 
 function DropDownMenu({ dayData, isOpen, onToggle }) {
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden">
+    <div className="border-2 border-teal-500 rounded-lg overflow-hidden">
       
       <button
         type="button"

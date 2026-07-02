@@ -5,14 +5,14 @@ export default function Step3NutrisiBudget({
   onKembaliKeStep2, 
   onLanjutKeStep4 
 }) {
-  const [showNutrisi, setShowNutrisi] = useState(true);
-  const [showBudget, setShowBudget] = useState(true);
+  const [showNutrisi, setShowNutrisi] = useState(false);
+  const [showBudget, setShowBudget] = useState(false);
 
   const totalBudgetMenu = 245000;
   const isBudgetValid = budgetInput >= totalBudgetMenu;
 
   return (
-    <div className="bg-white w-full max-w-lg p-8 rounded-lg shadow-md font-sans">
+    <div className="bg-white w-[95%] max-w-none p-10 rounded-xl shadow-lg border-2 border-teal-500 font-sans transition-all duration-300">
       <h2 className="text-[#2e8b57] text-center font-bold text-2xl m-0">STEP 3</h2>
       <div className="text-center text-gray-500 text-sm mt-1 mb-6">Informasi Nutrisi & Budget</div>
 

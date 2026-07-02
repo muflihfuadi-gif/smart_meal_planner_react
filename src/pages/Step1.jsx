@@ -29,7 +29,7 @@ function Step1() {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex-grow flex items-center justify-center min-h-[80vh] py-10">
       <Step1Form 
         individu={individu}
         setIndividu={setIndividu}

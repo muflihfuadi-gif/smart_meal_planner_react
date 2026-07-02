@@ -19,7 +19,7 @@ export default function Step3() {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex-grow flex items-center justify-center min-h-[80vh] py-10 px-4">
       <Step3NutrisiBudget 
         budgetInput={Number(budgetInput)} 
         onKembaliKeStep2={handleKembali}

@@ -10,13 +10,13 @@ function LoginForm({
   onSubmit
 }) {
   return (
-    <div className="bg-white w-full max-w-3xl p-12 rounded-xl shadow-lg transition-all duration-300">
+    <div className="bg-white w-full max-w-3xl p-12 rounded-xl shadow-lg border-2 border-teal-500 transition-all duration-300">
 
-      <div className="text-center mb-8">
-        <h2 className="text-[#2e8b57] font-bold text-3xl m-0">
+      <div className="text-center mb-10">
+        <h2 className="text-[#2e8b57] font-bold text-5xl m-0">
           Smart Meal Planner
         </h2>
-        <div className="text-gray-500 text-sm mt-2">
+        <div className="text-gray-500 text-lg mt-4">
           Masuk untuk mengatur rencana menu mingguan Anda
         </div>
       </div>
