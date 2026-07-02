@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Step3NutrisiBudget({ 
   budgetInput = 300000, 
-  onKembaliKeStep2, 
+  onKembaliKeStep1,
   onLanjutKeStep4 
 }) {
   const [showNutrisi, setShowNutrisi] = useState(false);
@@ -92,17 +92,17 @@ export default function Step3NutrisiBudget({
         <p className="text-[11px] mt-2 border-t pt-1.5 text-gray-500">
           {isBudgetValid 
             ? 'Anggaran Anda mencukupi untuk rencana menu mingguan ini. Silakan lanjut ke langkah berikutnya.' 
-            : 'Total anggaran menu mingguan melebihi batas budget Anda. Silakan revisi menu Anda.'}
+            : 'Total anggaran menu mingguan melebihi batas budget Anda. Silakan sesuaikan budget  Anda.'}
         </p>
       </div>
 
       <div className="flex justify-between items-center mt-8">
         <button 
           type="button" 
-          onClick={onKembaliKeStep2}
+          onClick={onKembaliKeStep1}
           className="px-5 py-2.5 bg-red-100 text-red-700 font-bold text-sm rounded border border-red-200 hover:bg-red-200 transition cursor-pointer"
         >
-          ⚠️ Revisi Menu (STEP 2)
+          Sesuaikan budget (Kembali ke Step1)
         </button>
         <button 
           type="button" 
