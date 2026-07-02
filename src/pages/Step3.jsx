@@ -9,9 +9,8 @@ export default function Step3() {
   const budgetInput = location.state?.budget || 300000; 
   const username = location.state?.username || 'Pengguna';
 
-  const handleKembali = () => {
-
-    navigate('/step-2', { state: { budget: budgetInput, username } });
+  const handleKembaliKeStep1 = () => {
+    navigate('/step-1', { state: { username } });
   };
 
   const handleLanjut = () => {
@@ -22,7 +21,7 @@ export default function Step3() {
     <div className="w-full flex-grow flex items-center justify-center min-h-[80vh] py-10 px-4">
       <Step3NutrisiBudget 
         budgetInput={Number(budgetInput)} 
-        onKembaliKeStep2={handleKembali}
+        onKembaliKeStep1={handleKembaliKeStep1}
         onLanjutKeStep4={handleLanjut}
       />
     </div>
