@@ -42,7 +42,7 @@ function Step4() {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex-grow flex items-center justify-center min-h-[80vh] py-10 px-4">
       <Step4ShoppingList
         username={username}
         budgetInput={Number(budgetInput)}
